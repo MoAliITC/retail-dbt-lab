@@ -3,9 +3,9 @@ retail_lab:
   outputs:
     dev:
       type: snowflake
-      account: xaoqjku-hd17334
-      user: MoAli
-      password: MoAli@1234567890
+      account: 
+      user: 
+      password:
       role: ACCOUNTADMIN
       database: RETAIL_LAB
       warehouse: COMPUTE_WH
