@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: raw
+    database: RETAIL_LAB
+    schema: RAW
+    description: "Raw tables loaded directly into Snowflake from the source system"
+    tables:
+      - name: orders_raw
+        description: >
+          Raw JSON orders table. One VARIANT row per order.
+          Created in the Snowflake lab: CREATE TABLE raw.orders_raw (raw_data VARIANT).
+          Update the column name below if yours differs.

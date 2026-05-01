@@ -1,0 +1,32 @@
+name: 'retail_lab'
+version: '1.0.0'
+config-version: 2
+
+profile: 'retail_lab'
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+snapshot-paths: ["snapshots"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+analysis-paths: ["analyses"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  retail_lab:
+    staging:
+      +schema: staging
+      +materialized: view
+    intermediate:
+      +schema: intermediate
+      +materialized: view
+    marts:
+      +schema: analytics
+      +materialized: table
+
+seeds:
+  retail_lab:
+    +schema: raw

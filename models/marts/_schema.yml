@@ -1,0 +1,48 @@
+version: 2
+
+models:
+  - name: fct_orders
+    description: "Fact table — one row per order line item with customer and product context"
+    columns:
+      - name: order_id
+        data_tests:
+          - not_null
+      - name: customer_id
+        data_tests:
+          - not_null
+      - name: line_total
+        data_tests:
+          - not_null
+
+  - name: dim_customers
+    description: "Customer dimension enriched with order statistics"
+    columns:
+      - name: customer_id
+        data_tests:
+          - not_null
+          - unique
+
+  - name: agg_daily_revenue
+    description: "Daily revenue aggregation with cumulative total"
+    columns:
+      - name: order_date
+        data_tests:
+          - not_null
+          - unique
+
+  - name: top_products_by_category
+    description: "Top 3 products per category ranked by revenue"
+    columns:
+      - name: rank_in_category
+        data_tests:
+          - not_null
+
+  - name: customer_spending_ranked
+    description: "All customers ranked by total spend with % of grand total"
+    columns:
+      - name: spending_rank
+        data_tests:
+          - not_null
+
+  - name: customers_masked
+    description: "Customer data with email addresses masked — safe for sharing"

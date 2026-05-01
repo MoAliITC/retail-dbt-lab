@@ -1,0 +1,21 @@
+
+{
+    "python.defaultInterpreterPath": "${workspaceFolder}/venv/Scripts/python.exe",
+    "python.terminal.activateEnvironment": true,
+    "[sql]": {
+        "editor.tabSize": 4
+    },
+    "[yaml]": {
+        "editor.tabSize": 2
+    },
+    "files.associations": {
+        "*.sql": "sql",
+        "*.yml": "yaml"
+    },
+    "editor.rulers": [80],
+    "editor.wordWrap": "on",
+    "terminal.integrated.env.windows": {
+        "DBT_PROFILES_DIR": "${workspaceFolder}"
+    },
+    "python-envs.defaultEnvManager": "ms-python.python:system"
+}

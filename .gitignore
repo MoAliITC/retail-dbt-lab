@@ -1,0 +1,26 @@
+# ========================
+# SENSITIVE - never commit
+# ========================
+profiles.yml           # contains Snowflake password
+
+# ========================
+# dbt auto-generated
+# ========================
+target/
+dbt_packages/
+logs/
+
+# ========================
+# Python virtual environment
+# ========================
+venv/
+__pycache__/
+*.pyc
+.python-version
+
+# ========================
+# OS files
+# ========================
+.DS_Store
+Thumbs.db
+*.log

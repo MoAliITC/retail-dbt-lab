@@ -1,0 +1,68 @@
+version: 2
+
+models:
+  - name: stg_customers
+    description: "Cleaned and standardised customer records from seeds"
+    columns:
+      - name: customer_id
+        description: "Primary key — unique per customer"
+        data_tests:
+          - not_null
+          - unique
+      - name: customer_name
+        data_tests:
+          - not_null
+      - name: email
+        data_tests:
+          - not_null
+      - name: city
+        data_tests:
+          - not_null
+      - name: signup_date
+        data_tests:
+          - not_null
+
+  - name: stg_products
+    description: "Cleaned product catalogue from seeds"
+    columns:
+      - name: product_id
+        description: "Primary key — unique per product"
+        data_tests:
+          - not_null
+          - unique
+      - name: product_name
+        data_tests:
+          - not_null
+      - name: category
+        data_tests:
+          - not_null
+          - accepted_values:
+              values: ['Electronics', 'Sports', 'Fashion', 'Home']
+      - name: price
+        data_tests:
+          - not_null
+
+  - name: stg_orders
+    description: "Parsed and flattened JSON orders — one row per line item"
+    columns:
+      - name: order_id
+        data_tests:
+          - not_null
+      - name: customer_id
+        data_tests:
+          - not_null
+          - relationships:
+              to: ref('stg_customers')
+              field: customer_id
+      - name: product_id
+        data_tests:
+          - not_null
+          - relationships:
+              to: ref('stg_products')
+              field: product_id
+      - name: quantity
+        data_tests:
+          - not_null
+      - name: order_date
+        data_tests:
+          - not_null

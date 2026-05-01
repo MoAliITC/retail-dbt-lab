@@ -1,0 +1,14 @@
+retail_lab:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: xaoqjku-hd17334
+      user: MoAli
+      password: MoAli@1234567890
+      role: ACCOUNTADMIN
+      database: RETAIL_LAB
+      warehouse: COMPUTE_WH
+      schema: DBT_DEV
+      threads: 4
+      client_session_keep_alive: false

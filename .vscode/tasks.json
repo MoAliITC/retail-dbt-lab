@@ -1,0 +1,82 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "dbt: debug (test connection)",
+            "type": "shell",
+            "command": ".\\venv\\Scripts\\dbt.exe debug --profiles-dir .",
+            "group": "test",
+            "presentation": { "reveal": "always", "panel": "shared" }
+        },
+        {
+            "label": "dbt: seed (load CSV files)",
+            "type": "shell",
+            "command": ".\\venv\\Scripts\\dbt.exe seed --profiles-dir .",
+            "group": "build",
+            "presentation": { "reveal": "always", "panel": "shared" }
+        },
+        {
+            "label": "dbt: seed customers + products only",
+            "type": "shell",
+            "command": ".\\venv\\Scripts\\dbt.exe seed --select customers products --profiles-dir .",
+            "group": "build",
+            "presentation": { "reveal": "always", "panel": "shared" }
+        },
+        {
+            "label": "dbt: run (build all models)",
+            "type": "shell",
+            "command": ".\\venv\\Scripts\\dbt.exe run --profiles-dir .",
+            "group": "build",
+            "presentation": { "reveal": "always", "panel": "shared" }
+        },
+        {
+            "label": "dbt: run staging only",
+            "type": "shell",
+            "command": ".\\venv\\Scripts\\dbt.exe run --select staging.* --profiles-dir .",
+            "group": "build",
+            "presentation": { "reveal": "always", "panel": "shared" }
+        },
+        {
+            "label": "dbt: run marts only",
+            "type": "shell",
+            "command": ".\\venv\\Scripts\\dbt.exe run --select marts.* --profiles-dir .",
+            "group": "build",
+            "presentation": { "reveal": "always", "panel": "shared" }
+        },
+        {
+            "label": "dbt: test (run all tests)",
+            "type": "shell",
+            "command": ".\\venv\\Scripts\\dbt.exe test --profiles-dir .",
+            "group": "test",
+            "presentation": { "reveal": "always", "panel": "shared" }
+        },
+        {
+            "label": "dbt: snapshot (SCD Type 2)",
+            "type": "shell",
+            "command": ".\\venv\\Scripts\\dbt.exe snapshot --profiles-dir .",
+            "group": "build",
+            "presentation": { "reveal": "always", "panel": "shared" }
+        },
+        {
+            "label": "dbt: docs generate + serve",
+            "type": "shell",
+            "command": ".\\venv\\Scripts\\dbt.exe docs generate --profiles-dir . && .\\venv\\Scripts\\dbt.exe docs serve",
+            "group": "build",
+            "presentation": { "reveal": "always", "panel": "shared" }
+        },
+        {
+            "label": "dbt: full refresh (incremental models)",
+            "type": "shell",
+            "command": ".\\venv\\Scripts\\dbt.exe run --full-refresh --profiles-dir .",
+            "group": "build",
+            "presentation": { "reveal": "always", "panel": "shared" }
+        },
+        {
+            "label": "dbt: seed + run + test (full pipeline)",
+            "type": "shell",
+            "command": ".\\venv\\Scripts\\dbt.exe seed --profiles-dir . && .\\venv\\Scripts\\dbt.exe run --profiles-dir . && .\\venv\\Scripts\\dbt.exe test --profiles-dir .",
+            "group": "build",
+            "presentation": { "reveal": "always", "panel": "shared" }
+        }
+    ]
+}

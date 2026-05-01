@@ -1,0 +1,21 @@
+customer_id,name,email,city,signup_date
+1,Amelia Williams,amelia.williams@gmail.com,Birmingham,2023-01-03
+2,George Jones,george.jones@gmail.com,Manchester,2023-03-04
+3,Isla Taylor,isla.taylor@gmail.com,London,2023-10-05
+4,Emily Jones,emily.jones@gmail.com,Manchester,2023-08-21
+5,George Smith,george.smith@gmail.com,Birmingham,2023-03-24
+6,Harry Brown,harry.brown@gmail.com,London,2023-07-18
+7,Oliver Smith,oliver.smith@gmail.com,Leeds,2023-06-25
+8,George Williams,george.williams@gmail.com,London,2023-08-25
+9,Emily Taylor,emily.taylor@gmail.com,Leeds,2023-09-03
+10,Olivia Jones,olivia.jones@gmail.com,Birmingham,2023-02-06
+11,Olivia Taylor,olivia.taylor@gmail.com,Leeds,2023-07-21
+12,Isla Jones,isla.jones@gmail.com,London,2023-01-02
+13,Amelia Brown,amelia.brown@gmail.com,London,2023-02-27
+14,Emily Brown,emily.brown@gmail.com,Leeds,2023-06-26
+15,George Smith,george.smith@gmail.com,Leeds,2023-05-03
+16,Noah Brown,noah.brown@gmail.com,Manchester,2023-10-28
+17,Oliver Jones,oliver.jones@gmail.com,Birmingham,2023-06-03
+18,Oliver Smith,oliver.smith@gmail.com,Manchester,2023-10-09
+19,Jack Brown,jack.brown@gmail.com,Birmingham,2023-02-15
+20,George Brown,george.brown@gmail.com,London,2023-08-27

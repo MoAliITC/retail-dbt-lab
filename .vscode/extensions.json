@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "innoverio.vscode-dbt-power-user",
+        "ms-python.python",
+        "redhat.vscode-yaml",
+        "mtxr.sqltools"
+    ]
+}
